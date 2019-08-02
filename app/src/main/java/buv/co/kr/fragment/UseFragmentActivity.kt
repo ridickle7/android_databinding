@@ -1,9 +1,9 @@
-package buv.co.kr
+package buv.co.kr.fragment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import androidx.databinding.ObservableField
+import buv.co.kr.R
 import buv.co.kr.databinding.ActivityUseFragmentBinding
 import kotlinx.android.synthetic.main.activity_use_fragment.*
 

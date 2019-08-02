@@ -3,13 +3,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
-        <variable name="fragment" type="buv.co.kr.UseFragment"/>
+        <variable name="fragment" type="buv.co.kr.fragment.UseFragment"/>
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:background="#77EEFF"
             android:layout_height="match_parent"
-            tools:context=".UseFragment">
+            tools:context=".fragment.UseFragment">
 
         <TextView
                 android:layout_width="wrap_content"

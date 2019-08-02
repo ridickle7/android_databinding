@@ -1,7 +1,5 @@
-package buv.co.kr
+package buv.co.kr.fragment
 
-import android.content.Context
-import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableField
+import buv.co.kr.R
 import buv.co.kr.databinding.FragmentUseBinding
 
 class UseFragment : Fragment() {
-    var fragmentName = ObservableField<String>("ridickle7")
+    var fragmentName = ObservableField("ridickle7")
     lateinit var binding : FragmentUseBinding
 
     override fun onCreateView(
