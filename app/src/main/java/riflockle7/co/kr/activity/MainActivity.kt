@@ -15,14 +15,15 @@ import riflockle7.co.kr.components.ItemListAdapter
 import riflockle7.co.kr.databinding.ActivityMainBinding
 import riflockle7.co.kr.fragment.UseFragmentActivity
 import kotlinx.android.synthetic.main.activity_main.*
+import riflockle7.co.kr.components.InfiniteScrollListenerBottom
 
 
-class MainActivity : AppCompatActivity(), InfiniteScrollListener.OnLoadMoreListener {
+class MainActivity : AppCompatActivity(), InfiniteScrollListenerBottom.OnLoadMoreListener {
     lateinit var binding: ActivityMainBinding
     var abcd: String = "abcd"
 
     lateinit var adapter: ItemListAdapter
-    lateinit var infiniteScrollListener: InfiniteScrollListener
+    lateinit var infiniteScrollListener: InfiniteScrollListenerBottom
     var mainHandler = Handler()
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -33,7 +34,7 @@ class MainActivity : AppCompatActivity(), InfiniteScrollListener.OnLoadMoreListe
         binding.activity = this
 
         var layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
-        infiniteScrollListener = InfiniteScrollListener(layoutManager, this)
+        infiniteScrollListener = InfiniteScrollListenerBottom(this)
         infiniteScrollListener.setLoaded()
 
         rv_items.layoutManager = layoutManager
@@ -74,22 +75,6 @@ class MainActivity : AppCompatActivity(), InfiniteScrollListener.OnLoadMoreListe
             val newData = getDummyList()
             adapter.addAll(newData)
 
-            infiniteScrollListener.setLoaded()
-        }, 2000)
-    }
-
-    override fun onLoadRefresh() {
-        // Log.d("onLoadRefresh", " called")
-        adapter.addProgressData(0)
-        adapter.notifyItemInserted(0)
-        rv_items.smoothScrollToPosition(0)
-
-        mainHandler.postDelayed({
-            adapter.removeProgressData(0)
-            val newData = getDummyList()
-            adapter.replaceAll(newData)
-
-            rv_items.smoothScrollToPosition(0)
             infiniteScrollListener.setLoaded()
         }, 2000)
     }
