@@ -3,11 +3,11 @@
         xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable name="item"
-                  type="buv.co.kr.components.Item"/>
+                  type="riflockle7.co.kr.components.Item"/>
 
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:padding="16dp" android:layout_height="wrap_content">
 
         <ImageView
@@ -17,6 +17,7 @@
                 android:layout_height="wrap_content"
                 android:scaleType="centerInside"
                 app:imageURL="@{item.imageURL}"
+                app:layout_constraintRight_toRightOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintTop_toTopOf="parent"/>
 

@@ -1,4 +1,4 @@
-package buv.co.kr.fragment
+package riflockle7.co.kr.fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ObservableField
-import buv.co.kr.R
-import buv.co.kr.databinding.FragmentUseBinding
+import riflockle7.co.kr.R
+import riflockle7.co.kr.databinding.FragmentUseBinding
 
 class UseFragment : Fragment() {
     var fragmentName = ObservableField("ridickle7")

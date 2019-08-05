@@ -1,4 +1,4 @@
-package buv.co.kr
+package riflockle7.co.kr
 
 import org.junit.Test
 

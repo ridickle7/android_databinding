@@ -1,10 +1,10 @@
-package buv.co.kr.fragment
+package riflockle7.co.kr.fragment
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
-import buv.co.kr.R
-import buv.co.kr.databinding.ActivityUseFragmentBinding
+import riflockle7.co.kr.R
+import riflockle7.co.kr.databinding.ActivityUseFragmentBinding
 import kotlinx.android.synthetic.main.activity_use_fragment.*
 
 class UseFragmentActivity : AppCompatActivity() {
