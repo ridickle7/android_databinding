@@ -12,8 +12,8 @@ class InfiniteScrollListener(
     private val POSITION_IDLE = 0
     private val POSITION_BOTTOM = 1
 
-    private var loading: Boolean = false // LOAD MORE Progress dialog
-    private var topScrolling: Boolean = false // LOAD MORE Progress dialog
+    private var loading: Boolean = false        // 데이터 가져오고 있는 중일 시 활성화
+    private var topScrolling: Boolean = false   // top refresh 완료 후, scrollToPosition(0) 실행 시 무한루프 방지
     private var pauseListening = false
 
     private var END_OF_FEED_ADDED = false
